@@ -137,9 +137,8 @@ a:hover {
 }
 
 .skills_head {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 3rem;
-  padding: 0 3rem;
 }
 .skills_cat {
   display: flex;
@@ -203,9 +202,8 @@ a:hover {
 }
 
 .projects_head {
-  font-size: 2rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
-  padding: 0 2rem;
 }
 
 .projects_list {
@@ -328,5 +326,20 @@ a:hover {
   }
   .project_right {
     width: 100%;
+  }
+  .header {
+    font-size: 2rem;
+  }
+  .skills_col {
+    padding: 0;
+  }
+  .projects_head {
+    margin-bottom: 0;
+  }
+  .skills_head {
+    margin-bottom: 0;
+  }
+  .email {
+    margin-top: 1rem;
   }
 }
