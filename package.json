@@ -1,7 +1,7 @@
 {
+  "homepage": "https://lukaszwent.github.io/portfolio",
   "name": "react-portfolio-app",
   "version": "0.1.0",
-  "homepage": "https://lukaszwent.github.io/",
   "private": true,
   "dependencies": {
     "@react-spring/parallax": "^9.5.5",
