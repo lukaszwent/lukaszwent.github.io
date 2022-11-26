@@ -1,0 +1,31 @@
+.header,
+.description {
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.technologies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+  .technologies {
+    margin-bottom: 0;
+  }
+}

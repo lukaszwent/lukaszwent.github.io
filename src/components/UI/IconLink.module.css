@@ -1,0 +1,19 @@
+.iconLink:link,
+.iconLink:visited {
+  background-color: #e02c2c;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  margin: 0.5rem;
+  text-decoration: none;
+}
+
+.iconLink:hover,
+.iconLink:active {
+  background-color: #fff;
+  color: #e02c2c;
+  transition: 0.25s;
+}

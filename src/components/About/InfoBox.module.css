@@ -1,0 +1,13 @@
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.title {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 0.2rem;
+  font-size: 2rem;
+}

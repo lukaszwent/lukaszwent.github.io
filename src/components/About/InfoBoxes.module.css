@@ -1,0 +1,30 @@
+.boxesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  color: #fff;
+  text-align: center;
+}
+
+.infoBoxContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contentTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.secondTitle {
+  font-size: 1.2rem;
+}
+
+.date {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
