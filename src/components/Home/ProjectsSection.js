@@ -7,17 +7,15 @@ const projectsList = [
   {
     title: "Quizz App",
     description:
-      "The application is an ABCD quiz with the possibility of choosing different categories and saving your previous results.",
+      "The application is an ABCD/(True, False) quiz with the possibility of choosing different categories.",
     technologies: [
       "React",
-      "Redux",
-      "Firebase",
       "React Router 6",
       "JavaScript",
       "Styled-Components",
     ],
-    github: "t",
-    play: "t",
+    github: "https://github.com/lukaszwent/quiz-app-react",
+    play: "https://lukaszwent.github.io/quiz-app-react/",
   },
 ];
 
