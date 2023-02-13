@@ -7,8 +7,11 @@ import classes from "./InfoBoxes.module.css";
 const skills = [
   "HTML",
   "CSS",
+  "Bootstrap",
   "JavaScript",
+  "TypeScript",
   "ReactJS",
+  "NextJS",
   "React Native",
   "NodeJS",
   "Express",

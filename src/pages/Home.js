@@ -1,14 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import { ParallaxLayer, Parallax } from "@react-spring/parallax";
 import { useLocation, useNavigate } from "react-router-dom";
 import { BsLinkedin } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
-import { motion, AnimatePresence } from "framer-motion";
 
 import ProjectsSection from "../components/Home/ProjectsSection";
 import ImageSection from "../components/UI/ImageSection";
-import Navigation from "../components/layouts/Navigation";
 
 import keyboard from "./keyboard.jpg";
 import contactimg from "./contact.jpg";
@@ -31,7 +28,7 @@ const Home = () => {
   }, [location.hash, isRefReady]);
 
   const mainData = {
-    title: "Hello, I'm a Front-end Developer",
+    title: "Hello, I'm a Web Developer",
     description: `My name is Lucas and this is my portfolio. I am interested in modern
     web development. Passion to programing has started in my first
     semester on studies when i touched the code in serious.`,
@@ -79,66 +76,51 @@ const Home = () => {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <Parallax pages={3}>
-        <Navigation />
-        <ParallaxLayer
-          speed={1}
-          factor={1}
-          style={{
-            backgroundImage: `url(${keyboard})`,
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "right",
-            zIndex: -1,
-          }}
-        >
-          <ImageSection {...mainData} content="left" />
-        </ParallaxLayer>
-
-        <ParallaxLayer offset={1} speed={0.5}>
-          <ProjectsSection />
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={2}
-          speed={0.25}
-          style={{
-            backgroundImage: `url(${contactimg})`,
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "left",
-            zIndex: -1,
-          }}
-        >
-          <div
-            ref={(el) => {
-              scroller.current = el;
-              setIsRefReady(true);
-            }}
-          >
-            <ImageSection
-              {...contactData}
-              content="right"
-              sectionID="contact"
-            />
-          </div>
-        </ParallaxLayer>
-      </Parallax>
-      <AnimatePresence
-        initial={false}
-        exitBeforeEnter={true}
-        onExitComplete={() => null}
+    <div>
+      <div
+        style={{
+          backgroundImage: `url(${keyboard})`,
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "right",
+          zIndex: -1,
+          height: "100vh",
+        }}
       >
-        {modalOpen && (
-          <Modal modalOpen={modalOpen} text="Email copied to clipboard" />
-        )}
-      </AnimatePresence>
-    </motion.div>
+        <ImageSection {...mainData} content="left" />
+      </div>
+      <div
+        style={{
+          height: "100%",
+        }}
+      >
+        <ProjectsSection />
+      </div>
+
+      <div
+        style={{
+          backgroundImage: `url(${contactimg})`,
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "left",
+          zIndex: -1,
+          height: "100vh",
+        }}
+      >
+        <div
+          ref={(el) => {
+            scroller.current = el;
+            setIsRefReady(true);
+          }}
+        >
+          <ImageSection {...contactData} content="right" sectionID="contact" />
+        </div>
+      </div>
+
+      {modalOpen && (
+        <Modal modalOpen={modalOpen} text="Email copied to clipboard" />
+      )}
+    </div>
   );
 };
 
